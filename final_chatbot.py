@@ -355,7 +355,8 @@ def get_intellii_signal(input):
 
     results = collection.find(query)
     for r in results:
-        return r['intelliiSignal']
+        return r['intelliiSignal'] + ' becuase of buyweightage'
+
 
 
 def merge(li):
@@ -463,9 +464,10 @@ def compare_two_stocks(input):
         ans2 = r['buyWeightage']
 
     if ans1 > ans2:
-        return s1 + ',' + 'as it has higher buy weightage'
+        return s1 + ',' + 'as it has higher buy weightage that is ' + ans1
     else:
-        return s2 + ',' + 'as it has higher buy weightage'
+        return s2 + ',' + 'as it has higher buy weightage that is ' + ans2
+
 
 
 '''prompt_template="""
